@@ -1,0 +1,48 @@
+Block and unblock user id's from keycloak
+============================
+curl --location --request POST 'https://igotkarmayogi.gov.in/api/user/v1/unblock' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiI5a04xTW1TcGVuVTAyam8zVHg1U2p0amhTOFVXeGVSUiJ9.LWAgFust4e0wntxqY8_MQjf5WQ9RSD6Hg45jX_NoCXY' \
+--header 'X-Authenticated-User-Token: eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI2V1JvWndCZTRJU0U1c2lkWlY5YW55NTZXTmp3clk0eWlPTy0zUC1uY3A4In0.eyJqdGkiOiI3YmViNDNiZS1hNTYyLTQ0NzUtYTE1ZS02MjE3MTc5ODYzM2EiLCJleHAiOjE2NjQ4NjI3MTYsIm5iZiI6MCwiaWF0IjoxNjY0Nzc2MzE2LCJpc3MiOiJodHRwczovL2lnb3RrYXJtYXlvZ2kuZ292LmluL2F1dGgvcmVhbG1zL3N1bmJpcmQiLCJzdWIiOiJmOmVmMmRjZWRmLWVkMmItNDhmYS04NWU5LWVlYWI5YTI3ODMyNToxYTYzY2I4ZC05YTgyLTQyMWEtYmRlYS05N2FhMGI5OWVkNjQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhZG1pbi1jbGkiLCJhdXRoX3RpbWUiOjAsInNlc3Npb25fc3RhdGUiOiIxNjZhYjUxZS01NDIyLTRlYmQtOTFiNS1iYTZmNDQ0ODMyYTMiLCJhY3IiOiIxIiwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInNjb3BlIjoiIiwibmFtZSI6Ik5hbGluaSBTaGFybWEiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJuYWxpbmluYXV0aXlhbF94MWpnIiwiZ2l2ZW5fbmFtZSI6Ik5hbGluaSIsImZhbWlseV9uYW1lIjoiU2hhcm1hIiwiZW1haWwiOiJuYSoqKipAbmljLmluIn0.XJ6oZGCDzivd67H-_DWA1oo831cw0nktnl7l8OIL_un73rjiDH8JcxuorlRs6N60gAQfPjiOM8IMtrtZ9lm-P6NMz6UXRWcHBJgSXG1nz6j2HY0WsQvVlyYPvcL7S4iSE-luSOmxkG1HXBW1JtK2pyqeMlW1lhigdmWE3B3-am4TEdF_54TzMSPVSCbDqm7p-b6qBXJrmMp80N6eaE98JojzzW5qGTkhTXDJEPHbn9nFP1Q5a3veiOpjzCd03YwNKvsZFbxjHHfcLix-0OSkY8iBQWiL-QCOcMNHXL70jV-EXYzWacZ-3KQGNa2utItyFM5ZRvFWVjGB04QuqBC0aA' \
+--data-raw '{
+    "request": {
+        "userId": "74d957cf-3033-4b5b-8c46-537c6a9dbe3c"
+    }
+}'
+
+
+===========================
+curl --location --request POST 'https://igotkarmayogi.gov.in/api/user/v1/block' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiI5a04xTW1TcGVuVTAyam8zVHg1U2p0amhTOFVXeGVSUiJ9.LWAgFust4e0wntxqY8_MQjf5WQ9RSD6Hg45jX_NoCXY' \
+--header 'X-Authenticated-User-Token: eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI2V1JvWndCZTRJU0U1c2lkWlY5YW55NTZXTmp3clk0eWlPTy0zUC1uY3A4In0.eyJqdGkiOiI3YmViNDNiZS1hNTYyLTQ0NzUtYTE1ZS02MjE3MTc5ODYzM2EiLCJleHAiOjE2NjQ4NjI3MTYsIm5iZiI6MCwiaWF0IjoxNjY0Nzc2MzE2LCJpc3MiOiJodHRwczovL2lnb3RrYXJtYXlvZ2kuZ292LmluL2F1dGgvcmVhbG1zL3N1bmJpcmQiLCJzdWIiOiJmOmVmMmRjZWRmLWVkMmItNDhmYS04NWU5LWVlYWI5YTI3ODMyNToxYTYzY2I4ZC05YTgyLTQyMWEtYmRlYS05N2FhMGI5OWVkNjQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhZG1pbi1jbGkiLCJhdXRoX3RpbWUiOjAsInNlc3Npb25fc3RhdGUiOiIxNjZhYjUxZS01NDIyLTRlYmQtOTFiNS1iYTZmNDQ0ODMyYTMiLCJhY3IiOiIxIiwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInNjb3BlIjoiIiwibmFtZSI6Ik5hbGluaSBTaGFybWEiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJuYWxpbmluYXV0aXlhbF94MWpnIiwiZ2l2ZW5fbmFtZSI6Ik5hbGluaSIsImZhbWlseV9uYW1lIjoiU2hhcm1hIiwiZW1haWwiOiJuYSoqKipAbmljLmluIn0.XJ6oZGCDzivd67H-_DWA1oo831cw0nktnl7l8OIL_un73rjiDH8JcxuorlRs6N60gAQfPjiOM8IMtrtZ9lm-P6NMz6UXRWcHBJgSXG1nz6j2HY0WsQvVlyYPvcL7S4iSE-luSOmxkG1HXBW1JtK2pyqeMlW1lhigdmWE3B3-am4TEdF_54TzMSPVSCbDqm7p-b6qBXJrmMp80N6eaE98JojzzW5qGTkhTXDJEPHbn9nFP1Q5a3veiOpjzCd03YwNKvsZFbxjHHfcLix-0OSkY8iBQWiL-QCOcMNHXL70jV-EXYzWacZ-3KQGNa2utItyFM5ZRvFWVjGB04QuqBC0aA' \
+--data-raw '{
+  "request": {
+        "userId": "607e2239-a2b1-483a-879d-8d4b9fc2cfec"
+    }
+}'
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+For GOV mail reply format
+With reference to trail mail, kindly provide us with below details so that we can go ahead and onboard the below department on IGOT.
+
+If it is a central ministry
+
+Ministry name: -
+
+Department name: -
+
+Organization name:
+
+If it is a state ministry
+
+State:
+Department name:
+
+Organization name:
+
+========================================
+
+Git_hub token
+
+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                                                                                                                    34,18         55%
